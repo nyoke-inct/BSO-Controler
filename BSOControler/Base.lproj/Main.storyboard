@@ -1,25 +1,324 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BSOControler" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8t-w8-xbh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.23318067528735625" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <state key="normal" title="AC"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="103" y="33" width="234" height="135"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ACPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tvF-LG-B6Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzj-cZ-sfN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.2331806753" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <state key="normal" title="BSC"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="437" y="33" width="234" height="135"/>
+                                </variation>
+                                <connections>
+                                    <action selector="BSCPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mdj-LC-PWu"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWX-qQ-R29">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="570" width="768" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj4-Lg-sEZ" userLabel="B1" customClass="Ramp" customModule="BSOControler">
+                                <rect key="frame" x="106" y="9" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="207" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="B1Pushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VIB-QJ-MeZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaZ-EJ-dYS">
+                                <rect key="frame" x="8" y="3" width="100" height="100"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="27" y="202" width="100" height="100"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYa-2K-MfS">
+                                <rect key="frame" x="5" y="127" width="100" height="100"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="340" width="100" height="100"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5y-I2-czi">
+                                <rect key="frame" x="382" y="240" width="113" height="116"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="522" y="455" width="113" height="116"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdX-G2-PDS">
+                                <rect key="frame" x="415" y="6" width="100" height="100"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="502" y="202" width="100" height="100"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8W-4B-P0R">
+                                <rect key="frame" x="8" y="254" width="100" height="100"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="27" y="471" width="100" height="100"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYy-xI-ZVl" userLabel="H" customClass="Ramp" customModule="BSOControler">
+                                <rect key="frame" x="498" y="9" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="645" y="207" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="HPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5cG-MF-t9p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwf-Dt-34I" userLabel="O2" customClass="Ramp" customModule="BSOControler">
+                                <rect key="frame" x="219" y="248" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="254" y="471" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="O2Pushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WAs-o3-bdA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-L1-zGO" userLabel="B2" customClass="Ramp" customModule="BSOControler">
+                                <rect key="frame" x="219" y="9" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="254" y="207" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="B2Pushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lif-OG-2Hi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NL6-up-cwb" userLabel="S2" customClass="Ramp" customModule="BSOControler">
+                                <rect key="frame" x="219" y="127" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="254" y="340" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="S2Pushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jiz-bp-ULp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ6-ue-eFU" userLabel="S1" customClass="Ramp" customModule="BSOControler">
+                                <rect key="frame" x="106" y="127" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="340" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="S1Pushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ujk-kL-kMR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvb-44-x8X" userLabel="O1" customClass="Ramp" customModule="BSOControler">
+                                <rect key="frame" x="106" y="248" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="130" y="471" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="O1Pushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0jp-2u-krd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrj-fX-hox" userLabel="B3" customClass="Ramp" customModule="BSOControler">
+                                <rect key="frame" x="327" y="6" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="388" y="207" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="B3Pushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCO-Yj-mn1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drh-v6-rVh" userLabel="E" customClass="Ramp" customModule="BSOControler">
+                                <rect key="frame" x="498" y="127" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="645" y="340" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="EPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D3D-nZ-6AG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXZ-dR-eUM" userLabel="FC" customClass="Ramp" customModule="BSOControler">
+                                <rect key="frame" x="498" y="248" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="645" y="471" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="FCPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vTq-rp-d9J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hio-Q2-1HF">
+                                <rect key="frame" x="415" y="127" width="100" height="100"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="505" y="340" width="100" height="100"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="e8t-w8-xbh"/>
+                                <exclude reference="Hzj-cZ-sfN"/>
+                                <exclude reference="fWX-qQ-R29"/>
+                                <exclude reference="Qj4-Lg-sEZ"/>
+                                <exclude reference="gaZ-EJ-dYS"/>
+                                <exclude reference="hYa-2K-MfS"/>
+                                <exclude reference="N5y-I2-czi"/>
+                                <exclude reference="SdX-G2-PDS"/>
+                                <exclude reference="H8W-4B-P0R"/>
+                                <exclude reference="rYy-xI-ZVl"/>
+                                <exclude reference="hwf-Dt-34I"/>
+                                <exclude reference="gbG-L1-zGO"/>
+                                <exclude reference="NL6-up-cwb"/>
+                                <exclude reference="jQ6-ue-eFU"/>
+                                <exclude reference="Lvb-44-x8X"/>
+                                <exclude reference="Nrj-fX-hox"/>
+                                <exclude reference="drh-v6-rVh"/>
+                                <exclude reference="QXZ-dR-eUM"/>
+                                <exclude reference="Hio-Q2-1HF"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="e8t-w8-xbh"/>
+                                <include reference="Hzj-cZ-sfN"/>
+                                <include reference="fWX-qQ-R29"/>
+                                <include reference="Qj4-Lg-sEZ"/>
+                                <include reference="gaZ-EJ-dYS"/>
+                                <include reference="hYa-2K-MfS"/>
+                                <include reference="N5y-I2-czi"/>
+                                <include reference="SdX-G2-PDS"/>
+                                <include reference="H8W-4B-P0R"/>
+                                <include reference="rYy-xI-ZVl"/>
+                                <include reference="hwf-Dt-34I"/>
+                                <include reference="gbG-L1-zGO"/>
+                                <include reference="NL6-up-cwb"/>
+                                <include reference="jQ6-ue-eFU"/>
+                                <include reference="Lvb-44-x8X"/>
+                                <include reference="Nrj-fX-hox"/>
+                                <include reference="drh-v6-rVh"/>
+                                <include reference="QXZ-dR-eUM"/>
+                                <include reference="Hio-Q2-1HF"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="ACButton" destination="e8t-w8-xbh" id="Igb-Vg-QW6"/>
+                        <outlet property="B1Button" destination="Qj4-Lg-sEZ" id="tNO-Uo-BFy"/>
+                        <outlet property="B2Button" destination="gbG-L1-zGO" id="VhX-7c-ZlA"/>
+                        <outlet property="B3Button" destination="Nrj-fX-hox" id="CF4-W2-R5J"/>
+                        <outlet property="BSCButton" destination="Hzj-cZ-sfN" id="Vcp-WH-xLj"/>
+                        <outlet property="EButton" destination="drh-v6-rVh" id="mor-uk-yog"/>
+                        <outlet property="FCButton" destination="QXZ-dR-eUM" id="ihW-xm-Vvj"/>
+                        <outlet property="HButton" destination="rYy-xI-ZVl" id="aOD-gk-cgt"/>
+                        <outlet property="O1Button" destination="Lvb-44-x8X" id="iJ2-B4-xA9"/>
+                        <outlet property="O2Button" destination="hwf-Dt-34I" id="Ocx-Gn-Crb"/>
+                        <outlet property="S1Button" destination="jQ6-ue-eFU" id="yUJ-p9-lru"/>
+                        <outlet property="S2Button" destination="NL6-up-cwb" id="Qnp-bk-JhX"/>
+                        <outlet property="statusText" destination="fWX-qQ-R29" id="EBj-ns-Z9x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="429"/>
         </scene>
     </scenes>
 </document>
