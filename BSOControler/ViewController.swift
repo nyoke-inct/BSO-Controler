@@ -9,9 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var b1: Bool = false
-    
+   
     @IBOutlet weak var B1Button: Ramp!
     @IBOutlet weak var B2Button: Ramp!
     @IBOutlet weak var B3Button: Ramp!
@@ -25,52 +23,152 @@ class ViewController: UIViewController {
     @IBOutlet weak var ACButton: UIButton!
     @IBOutlet weak var BSCButton: UIButton!
     @IBOutlet weak var statusText: UITextField!
+    @IBOutlet weak var httpText: UITextField!
     
-    @IBAction func B1Pushed(sender: AnyObject) {
-        if b1 == false{
-            B1Button.backgroundColor = UIColor.greenColor()
-            b1 = true
-        }
-        else{
-            B1Button.backgroundColor = UIColor.blackColor()
-            b1 = false
+    let apiBaseUrl = "http://192.168.1.100:3000/bso/"
+    let session: NSURLSession = NSURLSession.sharedSession()
+    
+    @IBAction func RampPushed(sender: Ramp)
+    {
+        
+        var url: NSURL!
+        let request: Request = Request()
+        
+        /*  
+         B   0 1 2
+         S   3 4
+         O   5 6
+         H   7
+         E   8
+         FC  9
+         */
+        
+        var button = ""
+        switch sender.tag
+        {
+        case 0: // B1
+            button = "B1"
+            break;
+        case 1: // B2
+            button = "B2"
+            break;
+        case 2: // B3
+            button = "B3"
+            break;
+        case 3: // S1
+            button = "S1"
+            break;
+        case 4: // S2
+            button = "S2"
+            break;
+        case 5: // O1
+            button = "O1"
+            break;
+        case 6: // O2
+            button = "O2"
+            break;
+        case 7: // H
+            button = "H"
+            break;
+        case 8: // E
+            button = "E"
+            break;
+        case 9: // FC
+            button = "FC"
+            break;
+            
+            default:
+                break;
         }
         
-        statusText.text = sender.description
+        var on_off = ""
+        if sender.on_off == false{
+            on_off = "on"
+        }
+        else{
+            on_off = "off"
+        }
+        
+        url = NSURL(string: apiBaseUrl + button + "-" + on_off)!
+        httpText.text = "sending request[ " + url.description + " ]"
+
+        request.get(url, completionHandler: { data, response, error in
+        
+            NSOperationQueue.mainQueue().addOperationWithBlock({
+                if error == nil{
+                    if on_off == "on"{
+                        sender.on()
+                    }
+                    else{
+                        sender.off()
+                    }
+                    self.statusText.text = response?.description
+                    self.httpText.text = "sending request[ " + url.description + " ] done."
+                }
+                else{
+                    self.statusText.text = error?.description
+                }
+
+            })
+        })
     }
     
-    @IBAction func B2Pushed(sender: AnyObject) {
-    }
-    
-    @IBAction func B3Pushed(sender: AnyObject) {
-    }
-    
-    @IBAction func S1Pushed(sender: AnyObject) {
-    }
-    
-    @IBAction func S2Pushed(sender: AnyObject) {
-    }
-    
-    @IBAction func O1Pushed(sender: AnyObject) {
-    }
-    
-    @IBAction func O2Pushed(sender: AnyObject) {
-    }
-    
-    @IBAction func HPushed(sender: AnyObject) {
-    }
-    
-    @IBAction func EPushed(sender: AnyObject) {
-    }
-    
-    @IBAction func FCPushed(sender: AnyObject) {
-    }
     
     @IBAction func ACPushed(sender: AnyObject) {
-        statusText.text = sender.description
+        var url: NSURL!
+        let request: Request = Request()
+        url = NSURL(string: apiBaseUrl + "ALL-off")!
+        httpText.text = "sending request[ " + url.description + " ]"
+        
+        request.get(url, completionHandler: { data, response, error in
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock({
+                if error == nil{
+                    self.httpText.text = "sending request[ " + url.description + " ] done."
+                    self.statusText.text = response?.description
+                    self.B1Button.off()
+                    self.B2Button.off()
+                    self.B3Button.off()
+                    self.O1Button.off()
+                    self.O2Button.off()
+                    self.S1Button.off()
+                    self.S2Button.off()
+                    self.HButton.off()
+                    self.EButton.off()
+                    self.FCButton.off()
+                }
+                else{
+                    self.statusText.text = error?.description
+                }
+            })
+
+        })
+
     }
     
     @IBAction func BSCPushed(sender: AnyObject) {
+        var url: NSURL!
+        let request: Request = Request()
+        url = NSURL(string: apiBaseUrl + "SB-off")!
+        httpText.text = "sending request[ " + url.description + " ]"
+        
+        request.get(url, completionHandler: { data, response, error in
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock({
+                if error == nil{
+                    self.httpText.text = "sending request[ " + url.description + " ] done."
+                    self.statusText.text = response?.description
+                    self.B1Button.off()
+                    self.B2Button.off()
+                    self.B3Button.off()
+                    self.S1Button.off()
+                    self.S2Button.off()
+                }
+                else{
+                    self.statusText.text = error?.description
+                }
+            })
+        })
     }
     
     override func viewDidLoad() {

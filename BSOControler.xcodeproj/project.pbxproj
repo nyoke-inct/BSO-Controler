@@ -16,6 +16,7 @@
 		733DC1771CACC806001D5A3E /* BSOControlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DC1761CACC806001D5A3E /* BSOControlerTests.swift */; };
 		733DC1821CACC806001D5A3E /* BSOControlerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DC1811CACC806001D5A3E /* BSOControlerUITests.swift */; };
 		7367DF1F1CB5077B00376035 /* Ramp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7367DF1E1CB5077B00376035 /* Ramp.swift */; };
+		73CC7FBC1CB6040700E09432 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC7FBB1CB6040700E09432 /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		733DC1811CACC806001D5A3E /* BSOControlerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSOControlerUITests.swift; sourceTree = "<group>"; };
 		733DC1831CACC806001D5A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7367DF1E1CB5077B00376035 /* Ramp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ramp.swift; sourceTree = "<group>"; };
+		73CC7FBB1CB6040700E09432 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				733DC16D1CACC806001D5A3E /* Info.plist */,
 				733DC1651CACC806001D5A3E /* BSOControler.xcdatamodeld */,
 				7367DF1E1CB5077B00376035 /* Ramp.swift */,
+				73CC7FBB1CB6040700E09432 /* Request.swift */,
 			);
 			path = BSOControler;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				733DC1671CACC806001D5A3E /* BSOControler.xcdatamodeld in Sources */,
 				7367DF1F1CB5077B00376035 /* Ramp.swift in Sources */,
+				73CC7FBC1CB6040700E09432 /* Request.swift in Sources */,
 				733DC1611CACC806001D5A3E /* ViewController.swift in Sources */,
 				733DC15F1CACC806001D5A3E /* AppDelegate.swift in Sources */,
 			);
